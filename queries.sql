@@ -92,4 +92,15 @@ use gsss;
 -- end//
 -- delimiter ;
 
-call process_payment(321,1111,10);
+-- call process_payment(321,1111,10);
+
+
+-- https://github.com/razzaksr/GSSS-Database
+
+
+-- joins
+select a.acc_holder, m.merchant_name, t.trans_amount, t.trans_date from transactions t inner join account a on t.trans_from=a.acc_num inner join merchant m on t.trans_to - m.merchant_id where a.acc_num=9888;
+
+
+
+
