@@ -177,3 +177,12 @@ db.reviews.insertMany([{"pro_id":69fc31770d76f6d9df0ac4fb,"user": "Meena",
 
 # lookup/ join
 db.products.aggregate([{$lookup:{from:"reviews",localField:"_id",foreignField:"pro_id", as:"product_reviews"}}])
+
+
+
+# match/ where
+db.products.aggregate([{$match:{type:"Electronics"}},{$lookup:{from:"reviews",localField:"_id",foreignField:"pro_id", as:"product_reviews"}}])
+
+
+
+Python MongoDB Placement Record CRUD
