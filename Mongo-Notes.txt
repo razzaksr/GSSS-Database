@@ -142,34 +142,38 @@ db.corporates.find().sort({"count":-1})
 
 
 # Normal Form/ Reference
-db.reviews.insertMany([{"pro_id":"69fc2ea10d76f6d9df0ac4fa","user": "Razak",
+db.reviews.insertMany([{"pro_id":69fc2ea10d76f6d9df0ac4fa,"user": "Razak",
       "rating": 4.1,
       "comments": "Good sound quality"
-},{"pro_id":"69fc2ea10d76f6d9df0ac4fa",
+},{"pro_id":69fc2ea10d76f6d9df0ac4fa,
       "user": "Vinoth",
       "rating": 2,
       "comments": "Worst packaging"
     },
-    { "pro_id":"69fc2ea10d76f6d9df0ac4fa",
+    { "pro_id":69fc2ea10d76f6d9df0ac4fa,
       "user": "Murali",
       "rating": 3,
       "comments": "Not good surround"
     }
 ])
 
-db.reviews.insertMany([{"pro_id":"69fc31770d76f6d9df0ac4fb","user": "Meena",
+db.reviews.insertMany([{"pro_id":69fc31770d76f6d9df0ac4fb,"user": "Meena",
       "rating": 4.5,
       "comments": "Good performance"
                        
-},{"pro_id":"69fc31770d76f6d9df0ac4fb",
+},{"pro_id":69fc31770d76f6d9df0ac4fb,
       "user": "Kasi",
       "rating": 4.6,
       "comments": "Great Spec"
     },
-    { "pro_id":"69fc31770d76f6d9df0ac4fb",
+    { "pro_id":69fc31770d76f6d9df0ac4fb,
       "user": "Prem",
       "rating": 3.1,
       "comments": "Not good battery"
 
     }
 ])
+
+
+# lookup/ join
+db.products.aggregate([{$lookup:{from:"reviews",localField:"_id",foreignField:"pro_id", as:"product_reviews"}}])
