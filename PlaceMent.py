@@ -23,8 +23,30 @@ def newPlacement():
     }
     campus.insert_one(company)
     print("Placement record added successfully!")
-    
-if __name__ == "__main__":
-    newPlacement()
-    
 
+def viewPlacements():
+    placements = campus.find()
+    for placement in placements:
+        print(placement)
+
+def filterByDate():
+    date_str = input("filter placements (YYYY-MM-DD): ")
+    filter_date = datetime.strptime(date_str, "%Y-%m-%d")
+    placements = campus.find({"company_visit_date": 
+        {"$gte": filter_date}})
+    for placement in placements:
+        print(placement)
+
+if __name__ == "__main__":
+    while True:
+        print("\n1. Add New Placement")
+        print("2. View All Placements")
+        print("3. Filter Placements by Date")
+        print("4. Exit")
+        choice = input("Enter your choice: ")
+        if choice == '1': newPlacement()
+        elif choice == '2': viewPlacements()
+        elif choice == '3': filterByDate()
+        elif choice == '4': break
+        else:print("Invalid choice, please try again.")
+    
