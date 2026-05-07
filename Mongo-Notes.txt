@@ -1,0 +1,42 @@
+# database creation/ switching
+use gsss;
+
+# view collections of the database
+show collections;
+
+# insert one document into the collection
+db.corporates.insertOne({"name":"hsbc","role":"Data Analyst","package":15.5,"count":10});
+
+# insert multiple documents into the collection
+db.corporates.insertMany([{"name":"Cognizant","role":"AI Engineer","count":20},{"name":"Infosys","role":"Associate Software Engineer"}])
+
+
+# fetch the documents of the collection
+db.corporates.find()
+
+
+# update one document
+db.corporates.updateOne({"name":"Cognizant"},{$set:{"package":4.5}})
+
+# fetch by filters
+db.corporates.find({"role":{"$regex":"Engineer","$options":"i"}})
+
+# update many by filters
+db.corporates.updateMany({"role":{"$regex":"Engineer","$options":"i"}},{"$inc":{"count":5}})
+
+
+# filter by >=
+db.corporates.find({"package":{"$gte":10.0}})
+
+# combined filter
+db.corporates.find({"$and":[{"package":{"$gte":3}},{"role":{"$regex":"Analyst","$options":"i"}}]})
+
+# deletion based on filter nin
+db.corporates.deleteMany({"role":{"$nin":["Test Engineer","AI Engineer"]}})
+
+# sortings
+db.corporates.find().sort({"package":1})
+db.corporates.find().sort({"count":-1})
+
+
+
