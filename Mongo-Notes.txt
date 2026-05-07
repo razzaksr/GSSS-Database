@@ -39,4 +39,137 @@ db.corporates.find().sort({"package":1})
 db.corporates.find().sort({"count":-1})
 
 
+# problem with embedded document
+[{
+  "_id": {
+    "$oid": "69fc2ea10d76f6d9df0ac4fa"
+  },
+  "name": "Zebronics V20",
+  "type": "Electronics",
+  "category": "Home Theatre",
+  "price": 20000,
+  "spec": 5.1,
+  "reviews": [
+    {
+      "user": "Razak",
+      "rating": 4.1,
+      "comments": "Good sound quality"
+    },
+    {
+      "user": "Vinoth",
+      "rating": 2,
+      "comments": "Worst packaging"
+    },
+    {
+      "user": "Murali",
+      "rating": 3,
+      "comments": "Not good surround"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69fc31770d76f6d9df0ac4fb"
+  },
+  "name": "Dell Vostro",
+  "type": "Electronics",
+  "category": "Laptop",
+  "price": 43000,
+  "spec": [
+    "corei5",
+    "16GB",
+    "512SSD"
+  ],
+  "reviews": [
+    {
+      "user": "Meena",
+      "rating": 4.5,
+      "comments": "Good performance"
+    },
+    {
+      "user": "Kasi",
+      "rating": 4.6,
+      "comments": "Great Spec"
+    },
+    {
+      "user": "Prem",
+      "rating": 3.1,
+      "comments": "Not good battery"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69fc31770d76f6d9df0ac4fc"
+  },
+  "name": "Rebok Casual20",
+  "type": "Footwear",
+  "category": "Shoe",
+  "price": 2500,
+  "colors": [
+    "red",
+    "blue",
+    "white"
+  ],
+  "reviews": [
+    {
+      "user": "Razak",
+      "rating": 4.1,
+      "comments": "Good quality"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "69fc31770d76f6d9df0ac4fd"
+  },
+  "name": "Safari retro",
+  "type": "Luggage",
+  "price": 2900,
+  "colors": [
+    "teal",
+    "red",
+    "black"
+  ],
+  "reviews": [
+    {
+      "user": "Vinoth",
+      "rating": 2,
+      "comments": "Worst packaging"
+    }
+  ]
+}]
 
+
+# Normal Form/ Reference
+db.reviews.insertMany([{"pro_id":"69fc2ea10d76f6d9df0ac4fa","user": "Razak",
+      "rating": 4.1,
+      "comments": "Good sound quality"
+},{"pro_id":"69fc2ea10d76f6d9df0ac4fa",
+      "user": "Vinoth",
+      "rating": 2,
+      "comments": "Worst packaging"
+    },
+    { "pro_id":"69fc2ea10d76f6d9df0ac4fa",
+      "user": "Murali",
+      "rating": 3,
+      "comments": "Not good surround"
+    }
+])
+
+db.reviews.insertMany([{"pro_id":"69fc31770d76f6d9df0ac4fb","user": "Meena",
+      "rating": 4.5,
+      "comments": "Good performance"
+                       
+},{"pro_id":"69fc31770d76f6d9df0ac4fb",
+      "user": "Kasi",
+      "rating": 4.6,
+      "comments": "Great Spec"
+    },
+    { "pro_id":"69fc31770d76f6d9df0ac4fb",
+      "user": "Prem",
+      "rating": 3.1,
+      "comments": "Not good battery"
+
+    }
+])

@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "69fc34b64fabcbe61a8afe59"
+  },
+  "pro_id": "69fc2ea10d76f6d9df0ac4fa",
+  "user": "Razak",
+  "rating": 4.1,
+  "comments": "Good sound quality"
+},
+{
+  "_id": {
+    "$oid": "69fc34b64fabcbe61a8afe5a"
+  },
+  "pro_id": "69fc2ea10d76f6d9df0ac4fa",
+  "user": "Vinoth",
+  "rating": 2,
+  "comments": "Worst packaging"
+},
+{
+  "_id": {
+    "$oid": "69fc34b64fabcbe61a8afe5b"
+  },
+  "pro_id": "69fc2ea10d76f6d9df0ac4fa",
+  "user": "Murali",
+  "rating": 3,
+  "comments": "Not good surround"
+},
+{
+  "_id": {
+    "$oid": "69fc35e54fabcbe61a8afe5c"
+  },
+  "pro_id": "69fc31770d76f6d9df0ac4fb",
+  "user": "Meena",
+  "rating": 4.5,
+  "comments": "Good performance"
+},
+{
+  "_id": {
+    "$oid": "69fc35e54fabcbe61a8afe5d"
+  },
+  "pro_id": "69fc31770d76f6d9df0ac4fb",
+  "user": "Kasi",
+  "rating": 4.6,
+  "comments": "Great Spec"
+},
+{
+  "_id": {
+    "$oid": "69fc35e54fabcbe61a8afe5e"
+  },
+  "pro_id": "69fc31770d76f6d9df0ac4fb",
+  "user": "Prem",
+  "rating": 3.1,
+  "comments": "Not good battery"
+},
+{
+  "_id": {
+    "$oid": "69fc36d34fabcbe61a8afe5f"
+  },
+  "pro_id": "69fc31770d76f6d9df0ac4fc",
+  "user": "Razak",
+  "rating": 4.1,
+  "comments": "Good quality"
+},
+{
+  "_id": {
+    "$oid": "69fc36d34fabcbe61a8afe60"
+  },
+  "pro_id": "69fc31770d76f6d9df0ac4fd",
+  "user": "Vinoth",
+  "rating": 2,
+  "comments": "Worst packaging"
+}]

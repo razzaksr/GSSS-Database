@@ -6,24 +6,7 @@
   "type": "Electronics",
   "category": "Home Theatre",
   "price": 20000,
-  "spec": 5.1,
-  "reviews": [
-    {
-      "user": "Razak",
-      "rating": 4.1,
-      "comments": "Good sound quality"
-    },
-    {
-      "user": "Vinoth",
-      "rating": 2,
-      "comments": "Worst packaging"
-    },
-    {
-      "user": "Murali",
-      "rating": 3,
-      "comments": "Not good surround"
-    }
-  ]
+  "spec": 5.1
 },
 {
   "_id": {
@@ -37,23 +20,6 @@
     "corei5",
     "16GB",
     "512SSD"
-  ],
-  "reviews": [
-    {
-      "user": "Meena",
-      "rating": 4.5,
-      "comments": "Good performance"
-    },
-    {
-      "user": "Kasi",
-      "rating": 4.6,
-      "comments": "Great Spec"
-    },
-    {
-      "user": "Prem",
-      "rating": 3.1,
-      "comments": "Not good battery"
-    }
   ]
 },
 {
@@ -68,13 +34,6 @@
     "red",
     "blue",
     "white"
-  ],
-  "reviews": [
-    {
-      "user": "Razak",
-      "rating": 4.1,
-      "comments": "Good quality"
-    }
   ]
 },
 {
@@ -88,12 +47,5 @@
     "teal",
     "red",
     "black"
-  ],
-  "reviews": [
-    {
-      "user": "Vinoth",
-      "rating": 2,
-      "comments": "Worst packaging"
-    }
   ]
 }]
